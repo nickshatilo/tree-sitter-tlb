@@ -168,12 +168,16 @@ module.exports = grammar({
 
     math_expression: $ => prec.left('math', choice(
       seq($._expression, '+', $._expression),
-      seq($._expression, '*', $._expression)
+      seq($._expression, '-', $._expression),
+      seq($._expression, '*', $._expression),
+      seq($._expression, '/', $._expression),
     )),
 
     type_math_expression: $ => prec.left('type_math', choice(
       seq($._type_expression, '+', $._type_expression),
-      seq($._type_expression, '*', $._type_expression)
+      seq($._type_expression, '-', $._type_expression),
+      seq($._type_expression, '*', $._type_expression),
+      seq($._type_expression, '/', $._type_expression)
     )),
 
     comparison_expression: $ => prec.left('comparison', seq(

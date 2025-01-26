@@ -17,6 +17,8 @@ Lazy.nvim:
     }
 ```
 
+Then, just run `:TSInstall tlb` 
+
 ## Grammar references
 
 * [Official docs](https://docs.ton.org/v3/documentation/data-formats/tlb/tl-b-language)
